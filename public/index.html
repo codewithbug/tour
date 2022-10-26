@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="theme-color" content="#2962FF" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title> Tripy.az - Azərbaycanın turizm platforması </title>
+
+    <meta name="description" content="Azərbaycanda turların dərc edilməsi , turlara qoşulma və turizmlə bağlı hərşey">
+    <meta name="keywords" content="tur , turlar , turizm , azerbaycanda tur , tur qiymetleri , qebele turu , sheki turu , quba turu , gence turu , mingecevir turu , lenkeran turu , en ucuz turlar , en yaxsi turlar , pulsuz tur  , daxili tur , xarici tur , xarici turllar , turkiye  turlari , gurcustan turlari , tur paketleri">
+    <meta name="robots" content="index, follow">
+
+
+    <!--  nunito font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+
+
+
+    <style>
+
+      /*  fix the scroll bar on the html tag 
+      ( there is a scroll bar without reason caused by one of the css files in the <head> tags ) */
+
+      html , body{
+        overflow-y: initial !important;
+        font-family: 'Nunito Sans', sans-serif !important;
+      }
+
+
+      body{
+        background: #f9f9fa !important;
+      }
+
+      
+
+      /* 
+         
+         fix the prefix and suffix on the input element of Vuetify library.
+         (prefixes and suffixes sticked to label or value in the input and
+         we add a 5px white-space between prefix/suffix and label/value )
+
+         Note: this problem caused by Bootstrap library (font-family.) and if we change another
+         font-family other than default one , it causes this problem
+
+      */
+
+      .v-text-field.v-text-field--solo .v-input__control input{
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .v-text-field.v-text-field--solo .v-label{
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+
+
+
+
+
+
+    </style>
+
+
   </head>
   <body>
     <noscript>

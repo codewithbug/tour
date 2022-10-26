@@ -1,0 +1,146 @@
+.mainContainer{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer{
+    box-shadow: 0 0 5px 0 lightgrey;
+    background-color: white;
+    font-size: 18px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.title > h1 {
+    font-weight: 700;
+}
+
+::v-deep .inputContainer{
+    font-size: 40px !important;
+}
+
+::v-deep .submitButton{
+    background-color: #2962FF !important;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+::v-deep .v-input--selection-controls__input .v-icon{
+    color: #2962FF;
+}
+
+::v-deep .v-input--selection-controls .v-input__slot > .v-label, .v-input--selection-controls .v-radio > .v-label{
+    margin-bottom: 0;
+}
+
+::v-deep .v-input--selection-controls__input{
+    margin-right: 5px;
+}
+
+.form-bottom{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.forgotPassword{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.forgotPassword a{
+    line-height: 20px;
+    font-size: 16px;
+}
+
+
+.loadingSpinner{
+
+    width: 1.1rem  !important;
+    height: 1.1rem !important;
+    border-width: 0.15em !important;
+    
+}
+
+
+.error ::v-deep .v-snack__wrapper.theme--dark{
+
+    background: #D50000 !important;
+
+}
+
+
+.error ::v-deep .v-btn__content{
+
+    color: white !important;
+
+    font-weight: bold !important;
+
+}
+
+
+.success ::v-deep .v-snack__wrapper.theme--dark{
+
+    background: #2962FF !important;
+
+}
+
+
+.signUpButton{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.success ::v-deep .v-btn__content{
+
+    color: white !important;
+
+    font-weight: bold !important;
+}
+
+@media screen and (max-width:1366px){
+    .formContainer{
+        flex: 0 0 45%;
+        max-width: 45%;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width:1204px){
+
+    ::v-deep .v-text-field.v-text-field--solo .v-label{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:1024px){
+
+    .formContainer{
+        flex: 0 0 55%;
+        max-width: 55%;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .formContainer{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    ::v-deep .v-text-field.v-text-field--solo .v-label , ::v-deep .v-text-field.v-text-field--solo .v-input__control input{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:377px){
+
+    ::v-deep .v-text-field.v-text-field--solo .v-label , ::v-deep .v-text-field.v-text-field--solo .v-input__control input{
+        font-size: 14px;
+    }
+
+}

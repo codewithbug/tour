@@ -1,0 +1,262 @@
+.mainContainer > div{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 22px;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+.logo{
+    font-weight: 900;
+    font-size: 32px;
+}
+
+.addNewTourButton{
+    background: #2962FF;
+    border-radius: 50px;
+    font-weight: 800;
+    color: white;
+    outline: none;
+    white-space: nowrap;
+    font-size: 26px;
+    overflow: hidden;
+    transition: background 0.1s;
+}
+
+.rightPart{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.avatar{
+    font-size: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.logout{
+    position: relative;
+}
+
+.avatarOverlay , .logoutOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+.dropdownMenu , .mobileDropdownMenu{
+    position: absolute;
+    background-color: white;
+    color: black;
+    font-size: 22px;
+    right: 36%;
+    width: 200px;
+    height: 87px;
+    transform: translateY(10%);
+    box-shadow: 0 0 5px 0 lightgrey;
+}
+
+
+
+.arrowUp{
+
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 5px 0 lightgrey;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: 2%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.dropdownLinks{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: white;
+}
+
+.dropdownLinks > a , .dropdownLinks > div{
+    transition: background-color 0.1s;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    display: block;
+
+}
+
+
+
+.mobileDropdownMenu{
+    right: 0;
+    transform: translateX(-10%) translateY(10%);;
+}
+.avatarMobile{
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.avatarIconContainer{
+    position: relative;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+
+.addNewTourButton:hover{
+    background: white;
+    color: #2962FF;
+}
+
+.addNewTourButtonMobile{
+    background: #2962FF;
+    border-radius: 50px;
+    font-weight: 800;
+    color: white;
+    outline: none;
+    white-space: nowrap;
+    font-size: 26px;
+    overflow: hidden;
+}
+
+
+.menuButton{
+    font-size:28px
+}
+
+
+.logoMobile{
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.mobileMenuOverlay{
+    position: fixed;
+    background: rgba(0,0,0,.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: opacity .2s;
+    height: 0;
+    opacity:0;
+}
+
+.menuIsActive > .mobileMenuOverlay{
+    height: initial;
+    opacity: 1;
+}
+
+.menuContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background:white;
+    box-shadow: 0 0 5px 0 #d3d3d3;
+    z-index: 3;
+    width: 0%;
+    height: 0;
+    overflow: hidden;
+    transition: width .3s;
+}
+
+.menuIsActive > .menuContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.upperPart{
+    border-bottom: 1px solid lightgrey;
+}
+
+.linksMobile{
+    color: black;
+    font-size: 25px;
+}
+
+.searchButtonMobile{
+    background-color: white;
+    color: #2962FF;
+    font-weight: 900;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.mobileSearchIcon{
+    font-size: 25px;
+    display: none;
+    vertical-align: middl !important;
+}
+
+.loadingSpinner{
+
+    width: 1.1rem  !important;
+    height: 1.1rem !important;
+    border-width: 0.15em !important;
+    border-color: #2962FF;
+    border-right-color: transparent !important;
+    
+}
+
+.profileImgContainer , .profileImgContainerMobile{
+    width:45px;
+    height: 45px;
+    border-radius: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*      Media Queries      */
+
+
+/* mobile breakpoints */
+
+@media screen and (min-width: 992px){
+    
+    .navbarMobile{
+        display: none !important;
+    }
+
+    .dropdownLinks > a:hover , .dropdownLinks > div:hover{
+
+        background-color: #2962FF;
+        color: white;
+    }
+
+    .dropdownLinks > div:hover > .loadingSpinner{
+        border-color: white;
+    }
+}
+
+@media screen and (max-width:991px){
+    .navbarWeb{
+        display: none !important;
+    }
+
+    .navbarMobile{
+        display: flex;
+    }
+
+    .mobileSearchIcon{
+        display: inline-block;
+    }
+
+}

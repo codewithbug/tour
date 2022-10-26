@@ -1,0 +1,115 @@
+.mainContainer{
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 0 5px 0 lightgrey;
+}
+
+::v-deep .theme--light.v-text-field--solo > .v-input__control > .v-input__slot{
+    border: 2px solid #2962FF;
+}
+
+::v-deep .v-text-field.v-text-field--solo .v-input__control input{
+    font-size: 20px;
+}
+
+::v-deep .v-text-field.v-text-field--solo .v-label{
+    color: #D3D3D3;
+    font-size: 20px;
+}
+
+.searchButton > button{
+    background-color: #2962FF !important;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+    color: white;
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: none;
+}
+
+
+::v-deep .v-date-picker-table .v-btn.v-btn--active{
+    background-color: #2962FF;
+    color: white;
+    font-weight: 700;
+}
+
+::v-deep .v-picker__title{
+    background-color: #2962FF;
+}
+
+
+::v-deep .priceContainer .v-text-field__suffix{
+    font-family: arial;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.closeSearchMenuButton{
+    width: 30px;
+    height: 30px;
+    background-color: #2962FF;
+    color: white;
+    text-align: center;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 2%;
+    right: 7%;
+    display: none;
+}
+
+.closeSearchMenuButton > svg{
+    vertical-align: middle;
+}
+
+
+
+/*      Media Queries     */
+
+@media screen and (max-width: 1366px){
+
+    ::v-deep .v-text-field.v-text-field--solo .v-input__control input{
+        font-size: 16px;
+    }
+    
+    ::v-deep .v-text-field.v-text-field--solo .v-label{
+        color: #D3D3D3;
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 1280px){
+
+    ::v-deep .v-text-field--rounded > .v-input__control > .v-input__slot{
+        padding: 0 14px;
+    }
+
+}
+
+@media screen and (max-width: 991px){
+    
+    .mainContainer{
+        border-radius: 25px;
+    }
+
+    .closeSearchMenuButton{
+        display: block;
+    }
+}
+
+
+@media screen and ( max-height: 550px){
+
+    .mainContainer{
+        justify-content: space-between;
+    }
+
+    .searchInput , .searchButton{
+        flex: 0 0 48%;
+        max-width: 48%;
+        margin: 16px 0;
+    }
+}

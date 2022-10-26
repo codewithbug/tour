@@ -1,0 +1,110 @@
+.addTourSection{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.addVipTourButton{
+
+    background-color: #2962FF;
+    color: white;
+    box-shadow: 0px 0px 5px 0px lightgrey;
+    font-weight: bold;
+    transition: background-color 0.1s;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.addVipTourButton:hover{
+    background-color: #0343f3;
+}
+
+.deleteButton{
+    background-color: #d50000;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+.deleteDialogTitle{
+    font-weight: bold !important;
+    font-size:30px !important;
+    text-overflow: ellipsis !important;
+    justify-content: center !important;
+}
+
+.deleteDialogText{
+    font-size:20px !important
+}
+
+.confirmDeleteButton{
+    font-size: 16px;
+    text-transform: none;
+    font-weight: bold;
+    background-color: #D50000;
+    color: white;
+}
+
+.cancelDeleteButton{
+    font-size: 16px;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.deleteResponseDialogText{
+
+    font-size:20px;
+    text-align: center;
+
+}
+
+.loadingSpinner{
+
+    width: 1.1rem  !important;
+    height: 1.1rem !important;
+    border-width: 0.15em !important;
+    
+}
+
+
+
+
+.error ::v-deep .v-snack__wrapper.theme--dark{
+
+    background: #D50000 !important;
+
+}
+
+
+.error ::v-deep .v-btn__content{
+
+    color: white !important;
+
+    font-weight: bold !important;
+
+}
+
+
+.success ::v-deep .v-snack__wrapper.theme--dark{
+
+    background: #2962FF !important;
+
+}
+
+
+.success ::v-deep .v-btn__content{
+
+    color: white !important;
+
+    font-weight: bold !important;
+
+}
+
+::v-deep .v-data-table > .v-data-table__wrapper > table tr{
+    cursor: pointer;
+}

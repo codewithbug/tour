@@ -1,0 +1,173 @@
+
+
+.imgContainer{
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-image: url("https://a0.muscache.com/im/pictures/4a470422-0c85-409f-a7f6-0f60263263b6.jpg?im_w=720"); */
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+}
+
+.rootElement{
+    overflow: hidden;
+}
+
+.title{
+    font-weight: 900;
+    font-size: 22px;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.priceContainer{
+    background-color: #2962FF;
+    font-weight: 900;
+    font-size: 26px;
+    color: white;
+
+}
+
+.feature{
+    color: #B8B8B8;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+.feature > svg{
+    color: #2962FF;
+}
+
+.wifiValue{
+    font-weight: 900;
+}
+
+.manatSymbol{
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.v-application .info{
+    border:none !important;
+    background-color: white !important;
+}
+
+
+
+
+
+/*      Media Queries      */
+
+@media screen and (max-width:1600px) {
+ 
+    .imgContainer{
+        height: 205px;
+    }
+
+    .title{
+        font-size: 18px;
+        margin-top: 16px !important;
+    }
+
+    .feature{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .priceContainer{
+        font-size: 22px;
+        padding: 4px 0 !important;
+    }
+
+    .manatSymbol{
+        font-size: 24px;
+    }
+}
+
+
+
+@media screen and (max-width:1280px){
+
+    .imgContainer{
+        height: 190px;
+    }
+
+    .title{
+        font-size: 16px;
+    }
+
+    .feature{
+        font-size: 12px;
+    }
+
+    .priceContainer{
+        font-size: 18px;
+    }
+
+    .manatSymbol{
+        font-size: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 1120px) {
+    
+    .imgContainer{
+
+        height: 165px;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    
+    .imgContainer{
+
+        height: 145px;
+    }
+
+    .feature{
+        font-size: 10px;
+    }
+
+    .priceContainer{
+        font-size: 16px;
+    }
+
+    .manatSymbol{
+        font-size: 18px;
+    }
+}
+
+
+@media screen and (max-width:992px) {
+    
+    .imgContainer{
+        height: 200px;
+    }
+
+    .feature{
+        font-size: 13px;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+
+    .priceContainer{
+        font-size: 20px;
+        padding: 8px 0 !important;
+    }
+
+    .manatSymbol{
+        font-size: 26px;
+    }
+
+}

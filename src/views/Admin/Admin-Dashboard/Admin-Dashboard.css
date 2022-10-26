@@ -1,0 +1,37 @@
+.mainContainer{
+    margin-top: 60px;
+}
+
+
+.saveButton{
+    background-color: #2962FF;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+.editButton{
+    background-color: #2962FF;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.leftPart{
+    position: fixed;
+    height: 90.2%;
+    top: 9.8%;
+    z-index: 99;
+    left: 0;
+    box-shadow: 0  0 5px  0 lightgrey;
+}
+
+::v-deep .v-data-table > .v-data-table__wrapper > table tr{
+    cursor: pointer;
+}

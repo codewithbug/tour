@@ -1,0 +1,12 @@
+.mainContainer{
+    margin-top: 60px;
+}
+
+.leftPart{
+    position: fixed;
+    height: 90.2%;
+    top: 9.8%;
+    z-index: 99;
+    left: 0;
+    box-shadow: 0  0 5px  0 lightgrey;
+}

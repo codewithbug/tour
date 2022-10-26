@@ -1,0 +1,417 @@
+.mainContainer{
+    margin-top: 60px;
+}
+
+
+
+.imageContainer{
+    position: relative;
+    max-height: 600px;
+    height: 600px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.imageContainer:hover .fullScreenButtonContainer{
+
+    opacity: 1;
+
+}
+.imageContainer > img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.title{
+    font-weight: 900;
+    font-size: 25px;
+}
+
+
+.contacts{
+    background-color: white;
+    box-shadow: 0 0 5px 0 lightgrey;
+}
+
+.contact-data{
+    font-size: 18px;
+    justify-content: space-between;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-data > p > svg{
+
+    color: #2962FF;
+}
+
+.socialLinks > a{
+    cursor: pointer;
+    font-size: 35px;
+}
+
+.whatsapp{
+    color: #01e675;
+}
+.youtube{
+    color: #FF0000;
+}
+.facebook{
+    color:#007bff
+}
+
+.instagramIcon {
+    fill: url(#instaColor);
+}
+
+
+.carouselContainer {
+    height: 150px;
+}
+
+
+
+
+::v-deep .carouselContainer .VueCarousel-inner {
+    column-gap: 10px !important;
+}
+.sld{
+    position: relative;
+    background: black;
+    text-align:center;
+    cursor: pointer;
+    transition: opacity .3s;
+}
+
+
+
+.activeSlide{
+    opacity: 0.3;
+}
+ 
+.sld > img {
+    max-width: 100%;
+    max-height: 100px;
+}
+
+.sldOverlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: red;
+    z-index: 1;
+    opacity: 0;
+}
+
+::v-deep .carouselContainer .VueCarousel-navigation-button{
+    top: 33% !important;
+}
+
+
+.fullScreenButtonContainer{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #000;
+    color: #fff;
+    bottom: 2%;
+    right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity .3s;
+}
+
+
+
+.fullScreenIcon{
+    line-height: 0;
+    cursor: pointer;
+}
+
+
+.fullScreenSlide{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 5;
+}
+
+.closeButton{
+    position: absolute;
+    color: #fff;
+    top: 2%;
+    right: 2%;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.fullScreenSldItem{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.fullScreenSldItem > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+::v-deep .sldContainer .VueCarousel , ::v-deep .VueCarousel-wrapper{
+    height: 100%;
+}
+
+
+/* ::v-deep .VueCarousel{
+    flex-direction: initial;
+    align-items: center;
+} */
+
+::v-deep .sldContainer>.VueCarousel>.VueCarousel-navigation>.VueCarousel-navigation-button {
+    color: white;
+    font-size: 40px;
+    
+}
+
+::v-deep .VueCarousel-inner{
+    height: 100% !important;
+    align-items: baseline;
+}
+
+.sldContainer{
+    height: 100%;
+}
+
+::v-deep .VueCarousel-dot--active{
+    outline: 1px solid lightblue;
+    background-color: white !important;
+}
+
+.tourTitle{
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.vipLabel{
+    color: white;
+    font-weight: 900;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #2962FF;
+    line-height: 0;
+    font-size: 16px;
+}
+
+.location{
+    font-size: 17px;
+}
+
+.location > svg{
+    color: #2962FF;
+}
+
+.aboutTour{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.tourDescription{
+    font-size: 22px;
+    white-space: pre-line;
+}
+
+.feature{
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.feature  > svg{
+    color: #2962FF;
+    font-size: 30px;
+}
+
+.tourFeatures{
+    row-gap: 20px;
+}
+
+.dateIcon , .timeIcon{
+    color: #2962FF;
+}
+
+::v-deep .mobileCarouselContainer > .VueCarousel   .VueCarousel-dot-container{
+    margin-top:0 !important
+}
+
+@media screen and (min-width: 992px){
+
+    .sld:hover{
+        opacity: 0.3;
+    }
+
+    .mobileCarouselContainer{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:1500px) {
+    
+    .socialLinks > a{
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width:1415px) {
+    
+    .socialLinks > a{
+        font-size: 27px;
+    }
+
+}
+
+
+@media screen and (max-width:1366px){
+
+    .contact-data{
+        font-size: 15px;
+    }
+
+    .title{
+        font-size: 22px;
+    }
+
+    .socialLinks{
+        margin-bottom: 0;
+    }
+
+    .socialLinks > a{
+        font-size: 25px;
+    }
+
+    .contacts{
+        padding: 24px !important;
+        /* padding-top:24px !important;
+        padding-bottom: 24px !important; */
+    }
+
+    .contactsContainer{
+        padding-left: 2rem  !important;
+    }
+
+    .tourTitle{
+        font-size: 38px;
+    }
+
+    .location{
+        font-size: 15px;
+    }
+
+    .aboutTour{
+        font-size: 25px;
+    }
+
+    .tourDescription{
+        font-size: 18px;
+    }
+
+    .feature{
+        font-size: 19px;
+    }
+
+    .feature > svg{
+        font-size: 25px;
+    }
+
+
+
+}
+
+
+@media screen and (max-width:1200px){
+    .title{
+        font-size: 18px;
+    }
+
+    .contact-data{
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (max-width:991px) {
+
+    .mainContainer{
+        margin-top: 0;
+    }
+
+    .slide{
+        display: none;
+    }
+
+    .mobileCarouselContainer{
+        height: 400px;
+    }
+
+    .mobileSld{
+        background: black;
+        text-align:center;
+    }
+
+    .mobileSld > img{
+        max-width: 100%;
+        max-height: 350px;
+    }
+
+    ::v-deep .carouselContainer .VueCarousel-inner {
+        column-gap: 0px !important;
+    }
+
+
+    .contactsContainer{
+        padding: 0 !important;
+    }
+
+    .title{
+        font-size: 22px;
+    }
+
+    .contact-data{
+        font-size: 15px;
+    }
+
+    .socialLinks > a{
+        font-size: 35px;
+    }
+
+    .tourTitle{
+        font-size: 30px;
+    }
+
+    .aboutTour{
+        font-size: 22px;
+    }
+
+    .tourDescription{
+        font-size: 16px;
+    }
+
+
+    
+}

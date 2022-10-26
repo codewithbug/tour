@@ -1,0 +1,234 @@
+.mainContainer{
+    margin-top: 60px;
+}
+
+.sidebar{
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 lightgrey;
+    font-size: 25px;
+    font-weight: 700;
+    height: 100%;
+}
+
+.sidebar > p{
+    cursor: pointer;
+    transition: background-color 0.1s , color 0.1s;
+}
+
+.sidebar > p:hover{
+    
+    background-color: #2962FF;
+    color: white;
+}
+
+.active{
+    background-color: #2962FF;
+    color: white;
+}
+
+.sidebarContainerWeb{
+    position: fixed;
+    height: 100%;
+}
+
+
+
+::v-deep .theme--light.v-text-field--solo > .v-input__control > .v-input__slot{
+    border: 2px solid #2962FF;
+}
+
+::v-deep .v-text-field.v-text-field--solo .v-input__control input{
+    font-size: 20px;
+}
+
+::v-deep .v-text-field.v-text-field--solo .v-label{
+    color: #D3D3D3;
+    font-size: 20px;
+}
+
+::v-deep .theme--dark.v-tabs > .v-tabs-bar{
+    background-color: #2962FF !important;
+}
+
+.v-tab--active{
+
+    color: white !important;
+}
+
+::v-deep .v-tabs-slider{
+    background-color: white !important;
+}
+
+.sidebarMobile{
+    display: none;
+}
+
+
+.profileImage{
+    padding-top: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://a0.muscache.com/im/pictures/4a470422-0c85-409f-a7f6-0f60263263b6.jpg?im_w=720);
+    border-radius: 300px;
+    width: 250px;
+}
+
+.changeProfileImageBtn{
+    font-weight: 700;
+    font-size: 22px;
+    box-shadow: 0 0 5px 0 lightgrey;
+}
+
+.personalInfo {
+    align-items: flex-start;
+    box-shadow: 0 0 5px 0 lightgrey;
+    background: white;
+}
+
+.passwordSection{
+    box-shadow: 0 0 5px 0 lightgrey;
+    background: white;
+}
+
+.saveButton{
+    background-color: #2962FF;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.profileImgInput{
+    display: none;
+}
+
+.loadingSpinner{
+
+    width: 1.1rem  !important;
+    height: 1.1rem !important;
+    border-width: 0.15em !important;
+    
+}
+
+
+
+
+.error ::v-deep .v-snack__wrapper.theme--dark{
+
+    background: #D50000 !important;
+
+}
+
+
+.error ::v-deep .v-btn__content{
+
+    color: white !important;
+
+    font-weight: bold !important;
+
+}
+
+
+.success ::v-deep .v-snack__wrapper.theme--dark{
+
+    background: #2962FF !important;
+
+}
+
+
+.success ::v-deep .v-btn__content{
+
+    color: white !important;
+
+    font-weight: bold !important;
+
+}
+
+ 
+::v-deep .error--text{
+    color: red;
+    font-weight: bold;
+}
+
+
+.saveButtonErrorMessage{
+    color: red;
+    font-weight: bold;
+}
+
+
+
+@media screen and (max-width:1460px){
+
+    .profileImage{
+        width: 200px;
+        padding-top: 200px;
+    }
+}
+
+
+@media screen and (max-width:1366px){
+    .profileImage{
+        width: 165px;
+        padding-top: 165px;
+    }
+
+    .changeProfileImageBtn{
+        font-size: 16px;
+    }
+
+    .saveButton{
+        font-size: 16px;
+    }
+
+    .infoInputContainer >div{
+        padding:0 0.5rem !important
+    }
+
+
+    ::v-deep .v-text-field.v-text-field--solo .v-label{
+        font-size: 16px;
+    }
+
+    .sidebar{
+        font-size: 22px;
+    }
+
+}
+
+@media screen  and (max-width:1280px){
+    .sidebar{
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width:1199px){
+    .profileImage{
+        width: 140px;
+        padding-top: 140px;
+    }
+
+    .infoInputContainer >div{
+        padding:0 0.25rem !important
+    }
+
+    
+}
+
+@media screen and (max-width:991px){
+
+    ::v-deep .theme--dark.v-tabs .v-tab:focus::before{
+        opacity: 0 !important;
+    }
+    
+    .sidebar{
+        display: none;
+    }
+
+    .sidebarMobile{
+        display: block;
+    }
+}

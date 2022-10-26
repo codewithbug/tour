@@ -1,0 +1,209 @@
+.mainContainer{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer , .emailConfirmDialogContainer{
+    box-shadow: 0 0 5px 0 lightgrey;
+    background-color: white;
+    font-size: 18px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.emailIcon{
+    font-size:100px;
+    color: #2962FF;
+}
+
+.emailConfirmationMsg{
+    font-size:20px;
+    text-transform: capitalize;
+}
+
+
+
+
+.title > h1 {
+    font-weight: 700;
+}
+
+.phoneNumberContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+::v-deep .phoneNumberContainer > .vue-tel-input > .vti__dropdown > .vti__selection{
+    line-height: 19px;
+}
+
+::v-deep .submitButton{
+    background-color: #2962FF !important;
+    font-weight: 700;
+    font-size: 16px;
+    /* text-transform: none; */
+}
+
+::v-deep .v-input--selection-controls__input .v-icon{
+    color: #2962FF;
+}
+
+::v-deep .v-input--selection-controls .v-input__slot > .v-label, .v-input--selection-controls .v-radio > .v-label{
+    margin-bottom: 0;
+}
+
+::v-deep .v-input--selection-controls__input{
+    margin-right: 5px;
+}
+
+::v-deep .error--text{
+    color: red;
+    font-weight: bold;
+}
+
+
+.sendButtonErrorMessage{
+    color: red;
+    font-weight: bold;
+}
+
+.sendButtonErrorMessage{
+    color: red;
+    font-weight: bold;
+}
+
+.loadingSpinner{
+
+    width: 1.1rem  !important;
+    height: 1.1rem !important;
+    border-width: 0.15em !important;
+    
+}
+
+
+.error ::v-deep .v-snack__wrapper.theme--dark{
+
+    background: #D50000 !important;
+
+}
+
+
+.error ::v-deep .v-btn__content{
+
+    color: white !important;
+
+    font-weight: bold !important;
+
+}
+
+
+.success ::v-deep .v-snack__wrapper.theme--dark{
+
+    background: #2962FF !important;
+
+}
+
+
+.success ::v-deep .v-btn__content{
+
+    color: white !important;
+
+    font-weight: bold !important;
+}
+
+::v-deep .vti__input{
+    display: none !important;
+}
+
+.loginButton{
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+@media screen and (min-width:1400px){
+    .formContainer{
+        max-width: 100% !important;
+        flex: 0 0 56% !important;
+    }
+}
+
+@media screen and (min-width:1600px) {
+    
+    .formContainer{
+        flex: 0 0 50% !important
+    }
+}
+
+@media screen and (min-width:1800px) {
+    
+    .formContainer{
+        flex: 0 0 43% !important
+    }
+}
+
+@media screen and (max-width:1366px){
+    .formContainer{
+        /* flex: 0 0 45%; */
+        /* max-width: 45%; */
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width:1280px) {
+
+    .emailConfirmationMsg{
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (max-width:1204px){
+
+    ::v-deep .v-text-field.v-text-field--solo .v-label{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:1024px){
+
+    .formContainer{
+        /* flex: 0 0 55%; */
+        /* max-width: 55%; */
+    }
+}
+
+@media screen and (max-width:991px) {    
+
+    ::v-deep .v-text-field.v-text-field--solo .v-label , ::v-deep .v-text-field.v-text-field--solo .v-input__control input{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:495px) {
+
+    .title > h1 {
+        font-size: 28px;
+    }
+
+    .emailIcon{
+        font-size: 70px;
+    }
+    
+}
+
+@media screen and (max-width:377px){
+
+    ::v-deep .v-text-field.v-text-field--solo .v-label , ::v-deep .v-text-field.v-text-field--solo .v-input__control input{
+        font-size: 14px;
+    }
+
+}
+

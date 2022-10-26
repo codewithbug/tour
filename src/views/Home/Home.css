@@ -1,0 +1,148 @@
+.mainContainer{
+    margin-top: 60px;
+}
+
+.searchContainerIsActive{
+    display: flex !important;
+}
+
+.cardSection{
+    position: relative;
+    min-height: 500px;
+    align-content: baseline;
+}
+
+
+.cardContainer{
+    text-decoration: none;
+    cursor: pointer;
+    flex: 0 0 22%;
+    max-width: 22%;
+    box-shadow: 0 0 5px 0 lightgrey;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+}
+
+.cardContainer:hover{
+    box-shadow: 0 0 10px 5px lightgrey;
+}
+
+
+.loadingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    background-color: #f9f9fa;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.loadingOverlay>div {
+    width: 50px;
+    height: 50px;
+}
+
+
+.vipTourTitle > p , .ordinaryToursTitle{
+    background: white;
+    color: #2962FF;;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 100px;
+    box-shadow: 0 0 5px 0px lightgrey;
+  }
+
+
+
+  .vipToursCarouselContainer , .vipToursCarousel{
+    display: flex;
+  }
+.vipToursCarousel > a{
+    max-width:11.5978%
+}
+
+.cardContainer{
+    display: flex;
+}
+
+.vipTourCarouselContainer{
+    display: flex;
+    overflow: hidden;
+}
+
+.VipTourCarousel{
+
+    display: flex;
+    justify-content: space-between;
+    transition: transform 1s;
+}
+
+@media screen and (max-width: 992px){
+    .searchContainer{
+        position: fixed;
+        top: 61px;
+        left: 0;
+        bottom: 0;
+        background: #ffffffcf;
+        display: none;
+        align-items: center;
+        z-index: 5;
+    }
+    
+
+    .cardContainer{
+        flex: 0 0 45%;
+        max-width: 45%;
+    }
+
+    .cardSection{
+        justify-content: space-between !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+@media screen and (max-width:635px) {
+
+    .cardContainer{
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+
+    
+}
+
+@media screen and (max-width:550px) {
+
+
+    .cardSection{
+        justify-content: center !important;
+    }
+
+    .cardContainer{
+        flex: 0 0 70%;
+        max-width: 80%;
+    }
+
+    .VipTourCarousel{
+        justify-content: space-around !important;
+    }
+
+
+    
+}
+
+@media screen and (max-width:450px) {
+
+
+
+    .cardContainer{
+        flex: 0 0 88%;
+        max-width: 88%;
+    }
+}
