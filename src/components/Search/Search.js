@@ -31,7 +31,8 @@ export default{
                 city:"",
                 minPrice:"",
                 maxPrice:"",
-                tourDate:[],
+                tourStartDate:"",
+                tourEndDate : ""
             }
         }
     },
@@ -45,9 +46,14 @@ export default{
         ]),
 
 
-        resetSearchDate : function(){
+        resetSearchStartDate : function(){
 
-            this.searchData.tourDate = []
+            this.searchData.tourStartDate = ""
+        },
+
+        resetSearchEndDate : function(){
+
+            this.searchData.tourEndDate = ""
         },
     
 
@@ -70,26 +76,63 @@ export default{
 
     computed:{
 
-        formatRangedDate : function(){
+        formatStartDate : {
 
-            if(this.searchData.tourDate.length > 1){
+            get : function(){
 
-                let firstDate = this.searchData.tourDate[0];
-                let secondDate = this.searchData.tourDate[1];
-                firstDate = firstDate.split("-") //11-05-2022 => [11.05,2022]
-                secondDate = secondDate.split("-")
+                if(this.searchData.tourStartDate.length > 1){
 
-                
-                firstDate = `${firstDate[2]} ${  this.monthNames[ Number( firstDate[1] ) ] } ${ firstDate[0] }`
-                secondDate = `${secondDate[2]} ${  this.monthNames[ Number( secondDate[1] ) ] } ${ secondDate[0] }`
+                    let startDate = this.searchData.tourStartDate
+                    startDate = startDate.split("-") //11-05-2022 => [11.05,2022]
 
+                    
+                    startDate = `${startDate[2]} ${  this.monthNames[ Number( startDate[1] ) ] } ${ startDate[0] }`
 
 
-                return `${firstDate} - ${secondDate}`
+
+                    return startDate
+
+                }
+
+            },
+
+            set : function(newValue){
+
+                return newValue
 
             }
 
-        }
+        },
+
+        formatEndDate : {
+
+
+            get : function(){
+
+                if(this.searchData.tourEndDate.length > 1){
+
+                    let endDate = this.searchData.tourEndDate
+                    endDate = endDate.split("-") //11-05-2022 => [11.05,2022]
+
+                    
+                    endDate = `${endDate[2]} ${  this.monthNames[ Number( endDate[1] ) ] } ${ endDate[0] }`
+
+
+
+                    return endDate
+
+                }
+
+            },
+
+            set : function(newValue){
+
+                return newValue
+
+            }
+
+        },
+
     },
 
 

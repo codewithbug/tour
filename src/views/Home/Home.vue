@@ -11,7 +11,10 @@
     </div>
 
 
-    <div class="col-12 px-0 my-5 pt-5">
+
+    <!--     Vip Tours Section      -->
+
+    <div v-show="vipTours && vipTours.length > 1" class="col-12 px-0 my-5 pt-5">
 
         <div class="col-12 px-0 mb-5 vipTourTitle">
 
@@ -25,7 +28,7 @@
 
                 <div class="VipTourCarousel cardSection"  ref="vipTourCarousel" :style="{ transform :  `translateX(-${vipTourSlided}%)`  }">
 
-                <a :href="base + 'details/' + tour.tourId" class="mb-5 cardContainer "  :style="{ flexBasis: (vipTourSlideData.newCardWidth > 0) ? vipTourSlideData.newCardWidth + '% !important' : '' }"  v-for="tour in vipTours" ref="vipTourCard"  :key="tour.id"  >
+                <a :href="base + 'details/' + tour.tourId" class="mb-5 cardContainer "  :style="{ flexBasis: (vipTourSlideData.newCardWidth > 0) ? vipTourSlideData.newCardWidth + '% !important' : ''  ,  maxWidth :  (vipTourSlideData.newCardWidth > 0) ? vipTourSlideData.newCardWidth + '% !important' : '100%'  }"  v-for="tour in vipTours" ref="vipTourCard"  :key="tour.id"  >
                     <Card v-bind="tour"/>
                 </a>
 
@@ -38,7 +41,7 @@
 
     <!--      Cards      -->
 
-    <div class="col-12 px-0 mt-5 pt-5 row no-gutters justify-content-between cardSection" ref="cardSection">
+    <div class="col-12 px-0 mt-5 pt-5 row no-gutters justify-content-between cardSection mainCardSection" ref="cardSection">
 
     <div class="loadingOverlay" v-show="loadingSpinnerIsActive">
 

@@ -125,9 +125,18 @@ const VueTelInput = () =>Promise.all([
                       Fotoqraf:false,
                       Bələdçi:false,
                       Parkinq:false,
-                  }
+                  },
+
+                  travelPlans : []
   
               },
+
+              travelPlanData : {
+
+                planDetail : "",
+                planDate : "",
+                planHour : ""
+            },
   
               selectDataCountry : [],
               selectDataCity : [],
@@ -147,6 +156,17 @@ const VueTelInput = () =>Promise.all([
 
             this.snackbarOpened = true;
 
+        },
+
+        addTravelPlan : function(){
+
+            this.tourData.travelPlans.push({...this.travelPlanData})
+
+        },
+
+        removeTravelPlan : function(index){
+
+            this.tourData.travelPlans.splice(index,1)
         },
 
 
@@ -298,6 +318,8 @@ const VueTelInput = () =>Promise.all([
               features = features.join("-");
   
               tourDataFormatted["features[]"] = features;
+
+              tourDataFormatted.travelPlans = JSON.stringify( tourDataFormatted.travelPlans );
               
               tourDataFormatted["imagesWillBeDeleted[]"] = this.imagesToDeleteFromServer;
   
@@ -613,7 +635,12 @@ const VueTelInput = () =>Promise.all([
 
                 data[0].features.map( feature => data[0]["features[]"][feature] = true )
 
-                delete data[0].features
+                delete data[0].features;
+
+
+                data[0].travelPlans = JSON.parse( data[0].travelPlan )
+
+                delete data[0].travelPlan
 
                 return data[0]
 

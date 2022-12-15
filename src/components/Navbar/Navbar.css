@@ -5,31 +5,52 @@
     align-items: center;
 }
 
+.navbarMobile{
+    color: #2962FF;
+}
+
 .links{
     display: flex;
     flex-wrap: wrap;
-    font-size: 22px;
+    font-size: 18px;
     align-items: center;
     cursor: pointer;
 }
 
+.links > a{
+    display: block;
+    color: #232323;
+    text-decoration: none;
+    font-weight: bold;
+}
 
+.links > p{
+    font-weight: bold;
+}
 
 .logo{
-    font-weight: 900;
+    color: #2962FF;
+    cursor: pointer;
+    font-weight: 900 !important;
     font-size: 32px;
 }
 
 .addNewTourButton{
-    background: #2962FF;
+    background: white;
     border-radius: 50px;
-    font-weight: 800;
-    color: white;
+    font-weight: bold;
+    color: #2962FF;
     outline: none;
     white-space: nowrap;
-    font-size: 26px;
+    font-size: 18px;
     overflow: hidden;
-    transition: background 0.1s;
+    box-shadow: 0 0 3px 0 lightgrey;
+    transition: background 0.3s;
+}
+
+.addNewTourButton:hover{
+    color: white;
+    background-color: #2962FF;
 }
 
 .rightPart{
@@ -38,7 +59,7 @@
     align-items: center;
 }
 .avatar{
-    font-size: 40px;
+    font-size: 36px;
     cursor: pointer;
     position: relative;
 }
@@ -114,14 +135,20 @@
 .avatarIconContainer{
     position: relative;
     display: inline-block;
-    vertical-align: text-bottom;
+    vertical-align: middle;
 }
 
-
-.addNewTourButton:hover{
-    background: white;
+.avatarIcon{
+    
     color: #2962FF;
+    transition: color 0.3s;
 }
+
+.avatarOverlay:hover ~.avatarIcon{
+    color: #0548ff;
+}
+
+
 
 .addNewTourButtonMobile{
     background: #2962FF;
@@ -191,6 +218,12 @@
     font-size: 25px;
 }
 
+.linksMobile > a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
 .searchButtonMobile{
     background-color: white;
     color: #2962FF;
@@ -226,6 +259,27 @@
 
 /*      Media Queries      */
 
+@media screen and (max-width: 1557px){
+    
+    .links{
+        font-size: 12px;
+    }
+
+    .logo{
+        font-size: 22px;
+    }
+
+    .addNewTourButton{
+        font-size: 12px;
+    }
+
+    .avatar{
+        font-size:30px
+    }
+
+
+}
+
 
 /* mobile breakpoints */
 
@@ -259,4 +313,26 @@
         display: inline-block;
     }
 
+}
+
+
+@media screen and (max-width: 336px){
+
+    .menuButton{
+        font-size: 25px;
+    }
+
+    .logoMobile{
+        font-size: 28px;
+    }
+
+
+    .mobileSearchIcon{
+        font-size: 23px;
+    }
+
+    .profileImgContainerMobile{
+        width:40px;
+        height: 40px;
+    }
 }

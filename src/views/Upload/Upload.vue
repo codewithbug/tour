@@ -167,9 +167,9 @@
             
         </div>
 
-        <div class="col-12  featuresContainer">
+        <div class="col-12 pl-0 mb-5 pb-5 featuresContainer">
 
-            <h1 class="col-12 text-center mb-5"> Tur özəllikləri: </h1>
+            <h1 class="col-12  mb-5"> Tur özəllikləri: </h1>
 
             <div class="col-6 col-lg-2 mb-3 feature">
 
@@ -281,6 +281,99 @@
 
 
         </div>
+
+
+        <!--      Travel Planning Section      -->
+
+    <div class="col-12 mb-3 mt-5  rowContainer travelPlanContainer">
+
+
+        <div class="col-12 col-lg-4 px-0 mb-5">
+
+            <div class="col-12 mb-5 travelPlanSectionTitle px-0">
+
+                <h1 class="col-auto pl-0"> Tur planlaşdırma   </h1>
+
+                <p class="col-auto pl-0 mb-0"> ( İstəyə bağlı ) </p>
+
+            </div>
+
+
+
+            <v-text-field  class="col-12  pr-2" solo name="name" label="Plan detalı" v-model="travelPlanData.planDetail" ></v-text-field>
+
+            
+            <v-menu  :close-on-content-click="false" transition="scale-transition" min-width="auto">
+            
+                <template v-slot:activator="{ on, attrs }">
+
+                <v-text-field  class="col-12  pr-2" readonly v-bind="attrs" v-on="on" solo  label="Plan tarixi" v-model="travelPlanData.planDate" ></v-text-field>
+
+                </template>
+
+                
+                <v-date-picker show-adjacent-months v-model="travelPlanData.planDate" > </v-date-picker>
+
+            </v-menu>
+            
+            <v-menu  :close-on-content-click="false" transition="scale-transition" min-width="auto">
+            
+                <template v-slot:activator="{ on, attrs }">
+
+                <v-text-field  class="col-12  pr-2" readonly v-bind="attrs" v-on="on" solo label="Plan saatı" v-model="travelPlanData.planHour" ></v-text-field>
+
+                </template>
+
+                
+                <v-time-picker v-model="travelPlanData.planHour"   format="24hr" scrollable> </v-time-picker>
+                
+            </v-menu>
+
+            <button  class="col-12  px-2 py-2 addTimelineButton" @click="addTravelPlan">  + Əlavə et </button>
+
+        </div>
+
+        <div class="col-12 col-lg-7 offset-lg-1 py-5 timelineContainer">
+
+            <v-timeline  class="col-12" v-show="tourData.travelPlans && tourData.travelPlans.length > 0">
+                
+
+                <v-timeline-item small class="col-12" v-for="(plan , index) in tourData.travelPlans" :key="index"> 
+
+                    <div class="col-12 row no-gutters flex-nowrap px-0">
+
+
+                        <p class="col-auto px-2 py-2" >
+
+                            <font-awesome-icon class="col-12 px-0 removeTimelineItemIcon"  icon="times" @click="removeTravelPlan(index)"></font-awesome-icon>
+                        
+                        </p>
+
+                        <div class="col-auto  text-break">
+
+                            <p class="col-auto px-0 mb-0 planDetailContainer">  {{ plan.planDetail }}  </p>                  
+
+                            <p class="col-auto px-0  mt-4 planDateContainer"> {{ plan.planDate }} {{ plan.planHour }} </p>
+
+                        </div>
+
+
+
+                    </div>
+
+                </v-timeline-item>
+
+
+            </v-timeline>
+
+
+        </div>
+
+    </div>
+
+
+
+            
 
         <!--      Submit Tour Button      -->
 

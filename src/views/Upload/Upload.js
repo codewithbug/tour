@@ -18,7 +18,6 @@ import { debounce } from "debounce";
 
 import { validations } from '@/utils/validations';
 
-import isMobilePhone from 'validator/es/lib/isMobilePhone';
 import { mapState } from 'vuex';
 
 export default {
@@ -94,8 +93,17 @@ export default {
                     Fotoqraf:false,
                     Bələdçi:false,
                     Parkinq:false,
-                }
+                },
 
+                travelPlans:[]
+
+            },
+
+            travelPlanData : {
+
+                planDetail : "",
+                planDate : "",
+                planHour : ""
             },
 
             selectDataCountry : [],
@@ -107,6 +115,17 @@ export default {
     },
 
     methods : {
+
+        addTravelPlan : function(){
+
+            this.tourData.travelPlans.push({...this.travelPlanData})
+
+        },
+
+        removeTravelPlan : function(index){
+
+            this.tourData.travelPlans.splice(index,1)
+        },
 
         saveFieldsData : function(){
 
@@ -123,7 +142,7 @@ export default {
 
                 fieldsDataParsed.countryCode = "";
 
-                this.tourData = fieldsDataParsed
+                this.tourData = Object.assign( {} , this.tourData , fieldsDataParsed )
             }
         },
 
@@ -219,6 +238,7 @@ export default {
             tourDataFormatted["features[]"] = features;  
 
 
+            tourDataFormatted.travelPlans = JSON.stringify( tourDataFormatted.travelPlans );
 
             return tourDataFormatted;
 
@@ -375,6 +395,8 @@ export default {
 
     async mounted() {
 
+        console.log(this.tourData);
+
         this.setUserId();
 
         const { default: countries } =  await import('@/constants/countries.json');
@@ -506,7 +528,6 @@ export default {
 
         phoneNumberError() {
 
-            let fullPhoneNumber = this.tourData.countryCode + this.tourData.phoneNumber;
 
             const errors = [];
             if (!this.$v.tourData.phoneNumber.$dirty) return errors;
@@ -520,9 +541,9 @@ export default {
             }
 
 
-            if( !isMobilePhone( fullPhoneNumber ) ){
+            if( !this.$v.tourData.phoneNumber.validatePhoneNumber ){
 
-                errors.push('Yanlış Nömrə Formatı !')
+                errors.push('Yanlış Nömrə Formatı, Boşsluq Olmaz !')
 
                 return errors
 

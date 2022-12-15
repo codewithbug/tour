@@ -139,7 +139,13 @@ export default{
 
             tourData.features = tourData.features.split("-")
 
+            console.log(tourData.travelPlan )
+
+            tourData.travelPlans = JSON.parse( tourData.travelPlan );
+
             this.currentSlide = this.api + 'images/' + tourData.images[0];
+
+            delete tourData.travelPlan;
 
             return tourData
         },

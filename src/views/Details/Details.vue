@@ -191,6 +191,52 @@
             </div>
 
 
+    
+
+                <!--      Travel Planning Section      -->
+
+            <div class="col-12 mb-3 mt-5 px-0 pb-5 rowContainer travelPlanContainer" v-show="tourData.travelPlans && tourData.travelPlans.length > 0">
+
+
+
+                <p  class="col-12 px-0 travelPlanLabel"> Tur Planı </p>
+
+
+                <div class="col-12 px-0 py-5 timelineContainer">
+
+                    <v-timeline  class="col-12" >
+                        
+
+                        <v-timeline-item small class="col-12" v-for="(plan , index) in tourData.travelPlans" :key="index"> 
+
+                            <div class="col-12 row no-gutters flex-nowrap px-0">
+
+
+
+                                <div class="col-auto  text-break">
+
+                                    <p class="col-auto px-0 mb-0 planDetailContainer">  {{ plan.planDetail }}  </p>                  
+
+                                    <p class="col-auto px-0  mt-4 planDateContainer"> {{ plan.planDate }} {{ plan.planHour }} </p>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </v-timeline-item>
+
+
+                    </v-timeline>
+
+
+                </div>
+
+            </div>
+
+
+
             <p class="col-12 px-0 mt-5 aboutTour"> Tur Haqqında Məlumat </p>
 
             <p  class="col-12 px-0 tourDescription">

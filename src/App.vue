@@ -8,7 +8,7 @@
     </div>
 
 
-
+      
       <router-view data-app></router-view>
 
 
@@ -25,8 +25,8 @@
 
 .navbarContainer{
 
-  background:#2962FF;
-  color: white;
+  background: white;
+  color: #232323;
   padding-left: 10px !important;
   padding-right: 10px !important;
   box-shadow: 0 0 5px 0 #d3d3d3;
@@ -34,6 +34,16 @@
   z-index: 5;
   top: 0;
 }
+
+
+@media screen and  (max-width: 1557px){
+
+  .navbarContainer{
+    padding-top:0.5rem !important;
+    padding-bottom:0.5rem !important;
+  }
+}
+
 
 </style>
 

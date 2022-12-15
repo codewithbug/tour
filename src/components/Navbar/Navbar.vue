@@ -7,19 +7,26 @@
     <div class="navbarWeb">
 
         <!--      links on navbar      -->
-        <div class="col-auto px-0 links">
+        <div class="col-auto px-0">
 
             <p class="col-auto px-0 mb-0 mr-5 logo" @click="onMobileMenuClick('/')"> Tripy.az </p>
-            <p class="col-auto px-0 mb-0 mr-3" @click="onMobileMenuClick('/')"> Əsas </p>
-            <p class="col-auto px-0 mb-0 mr-3"> Haqqımızda </p>
-            <p class="col-auto px-0 mb-0 mr-3"> Əlaqə </p>
+
 
         </div>
+        <div class="col-auto px-0 links">
+
+            <p class="col-auto px-0 mb-0 mx-3" @click="onMobileMenuClick('/')"> Əsas </p>
+            <p class="col-auto px-0 mb-0 mx-3"> Haqqımızda </p>
+            <a class="col-auto px-0 mb-0 mx-3" href="https://wa.me/+994556627955"> Əlaqə </a>
+
+        </div>
+
+
 
         <!--      navbar right side (button , profile icon etc.)      -->
         <div class="col-auto rightPart">
 
-            <button class="col-auto text-center px-4 py-1 addNewTourButton" @click="onMobileMenuClick('/upload')"> Yeni tur +</button>
+            <button class="col-auto text-center px-4 py-2 addNewTourButton" @click="onMobileMenuClick('/upload')"> Yeni tur +</button>
 
             <div class="col-auto mb-0 avatar" v-if="userInfo" >
 
@@ -99,7 +106,7 @@
 
                 <p class="col-12 text-center" @click="onMobileMenuClick('/')"> Əsas </p>
                 <p class="col-12 text-center"> Haqqımızda </p>
-                <p class="col-12 text-center"> Əlaqə </p>
+                <a class="col-12 text-center" href="https://wa.me/+994556627955"> Əlaqə </a>
 
             </div>
 
@@ -146,7 +153,8 @@
                 include:clickOutsideInclude
                     
                 }" @click="toggleMobileDropdown"  ></div>
-                <!-- <font-awesome-icon icon="fas fa-user-circle"  /> -->
+
+                <font-awesome-icon v-if="!userInfo.profileImage"  icon="fas fa-user-circle"  />
 
                 <div class="profileImgContainerMobile" v-if="userInfo.profileImage"  :style="{backgroundImage : 'url(' + api + `images/${userInfo.profileImage}` + ')' }">
 

@@ -117,9 +117,9 @@ export default{
 
         formatSearchData : function(searchData){
 
-            searchData.startDate = searchData.tourDate[0] || "";
+            searchData.startDate = searchData.tourStartDate || "";
 
-            searchData.endDate = searchData.tourDate[1] || ""; 
+            searchData.endDate = searchData.tourEndDate || ""; 
 
             for( let key in searchData){
 
@@ -291,6 +291,8 @@ export default{
 
 
         initVipTourSlider : function(){
+
+            console.log(this.vipTours.length )
 
             if( this.vipTours.length < 1 ){
 

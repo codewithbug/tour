@@ -258,6 +258,105 @@
     margin-top:0 !important
 }
 
+
+
+::v-deep .theme--light.v-timeline::before{
+    left : calc( 50% - 1px)
+}
+
+
+.addTimelineButton{
+
+    background-color: #2962FF;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 0 0 5px 0 lightgrey;
+}
+
+
+
+.travelPlanSectionTitle > h1 {
+    font-weight: 700;
+}
+
+.travelPlanSectionTitle > p {
+
+    color: #8080808f;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.travelPlanContainer > p {
+
+    font-size: 30px;
+    color: grey;
+    font-weight: 600;
+    
+}
+
+.timelineContainer{
+    background: white;
+    box-shadow: 0 0 3px 0 lightgrey;
+}
+
+.travelPlanSectionTitle{
+    display: flex;
+    align-items: center;
+}
+
+.planDetailContainer{
+    font-weight: bold;
+}
+
+.planDateContainer{
+    color: grey;
+}
+
+::v-deep .v-timeline-item{
+    align-items: center !important;
+    padding-bottom: 40px;
+}
+
+::v-deep .v-timeline-item__body{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* ::v-deep .v-timeline-item:nth-child(even) > .v-timeline-item__body , ::v-deep .v-timeline-item:nth-child(even) > .v-timeline-item__body > div {
+
+    justify-content: end;
+} */
+
+::v-deep .v-timeline-item:nth-child(odd) > .v-timeline-item__body > div > div{
+    padding-right: 24px;
+    text-align: right;
+}
+
+::v-deep .v-timeline-item:nth-child(even) > .v-timeline-item__body > div > div{
+    padding-left: 24px;
+}
+
+::v-deep .v-timeline-item:nth-child(even) .v-timeline-item__dot {
+    background-color: #2962FF !important;
+}
+
+::v-deep .v-timeline-item:nth-child(odd) > .v-timeline-item__body > div{
+
+    flex-direction: row-reverse !important;
+}
+
+::v-deep .v-timeline-item__body > div{
+    align-items: baseline;
+}
+
+.removeTimelineItemIcon{
+    cursor: pointer;
+}
+
+
 @media screen and (min-width: 992px){
 
     .sld:hover{
@@ -323,9 +422,11 @@
         font-size: 15px;
     }
 
-    .aboutTour{
+    .aboutTour , .travelPlanContainer > p{
         font-size: 25px;
     }
+
+    
 
     .tourDescription{
         font-size: 18px;
@@ -345,6 +446,64 @@
 
 
 @media screen and (max-width:1200px){
+
+    .travelPlanSectionTitle > h1{
+        font-size: 25px
+    }
+
+    .travelPlanSectionTitle > p{
+        font-size: 16px
+    }
+
+    .timelineContainer{
+        font-size:13px;
+        padding-left:0;
+        padding-right: 0;
+    }
+
+    .addTimelineButton{
+        font-size:16px
+    }
+
+    ::v-deep .theme--light.v-timeline::before{
+        right: auto;
+        left : 47px
+    }
+
+    ::v-deep .v-timeline-item{
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: row-reverse !important;
+
+
+    }
+
+    ::v-deep .v-timeline-item__body{
+
+        max-width: calc(100% - 96px) !important;
+
+
+    }
+
+    ::v-deep .theme--light.v-timeline{
+        padding-left: 0;
+        padding-right: 30px;
+    }
+
+
+    ::v-deep .v-timeline-item:nth-child(even) > .v-timeline-item__body > div{
+        flex-direction: row-reverse;
+
+    }
+
+    ::v-deep .v-timeline-item__body > div > div {
+
+        padding-right: 24px !important;
+        padding-left: 0 !important;
+        text-align: right;
+    }
+
+    
     .title{
         font-size: 18px;
     }
@@ -404,7 +563,7 @@
         font-size: 30px;
     }
 
-    .aboutTour{
+    .aboutTour , .travelPlanContainer > p{
         font-size: 22px;
     }
 

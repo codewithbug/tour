@@ -15,7 +15,7 @@
                     <p class="col-7 px-0 mb-4 feature" > <font-awesome-icon icon="far fa-clock" /> {{ getDiffAsDay( tourStartDate , tourEndDate ) }} günlük</p>
                     <p class="col-5 px-0 mb-4 feature" > <font-awesome-icon icon="far fa-calendar-alt" /> {{ formatDate(tourStartDate) }}</p>
                     <p class="col-7 px-0 mb-4 feature" > <font-awesome-icon icon="fas fa-map-marker-alt" /> {{country}} , {{city}}</p>
-                    <p class="col-5 px-0 mb-4 feature" > <font-awesome-icon icon="fas fa-wifi" /> Wifi: <span class="wifiValue"> {{ featureExists('wifi') ? 'Var' : 'Yox' }} </span> </p>
+                    <p class="col-5 px-0 mb-4 feature" > <font-awesome-icon icon="fas fa-wifi" /> Wifi: <span class="wifiValue"> {{ featureExists('Wifi') ? 'Var' : 'Yox' }} </span> </p>
 
 
                 </div>

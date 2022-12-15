@@ -18,7 +18,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 
 import { faBars , faMapMarkerAlt , faWifi , faPhone , faGlobe , faEnvelope , faExpand , faTimesCircle , faArrowUpFromBracket ,  faUserCircle , faTimes ,
   
-  faSearch , faCheckCircle , faLongArrowAltRight , faSortUp , faHashtag
+  faSearch , faCheckCircle , faLongArrowAltRight , faSortUp , faHashtag , faCoins
 
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -32,7 +32,7 @@ library.add( faBars , faClock , faCalendarAlt , faMapMarkerAlt ,faWifi , faPhone
 
    faInstagram , faYoutube , faWhatsapp ,faExpand , faTimesCircle ,  faUserCircle , faTimes , faSearch , faCheckCircle , 
    
-   faArrowUpFromBracket , faLongArrowAltRight , faSortUp , faHashtag
+   faArrowUpFromBracket , faLongArrowAltRight , faSortUp , faHashtag , faCoins
    
   )
 

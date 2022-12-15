@@ -116,9 +116,12 @@ export default{
         ])
     },
 
+ 
+
     computed:{
 
         currentPageIsHome:function(){
+            console.log(this.$route.meta);
 
             return this.$route.meta.isHome;
         },
@@ -129,6 +132,8 @@ export default{
         ])
 
     },
+
+    
 
     created(){
 

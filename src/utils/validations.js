@@ -1,5 +1,9 @@
 import { required , numeric , email } from 'vuelidate/lib/validators';
 
+import isMobilePhone from 'validator/es/lib/isMobilePhone';
+
+const validatePhoneNumber = ( value , tourData) => isMobilePhone( tourData.countryCode + value , "any", {strictMode:true} )
+
 var validations = {
 
     tourData : {
@@ -16,7 +20,7 @@ var validations = {
 
         tourEndDate : {required } , 
 
-        phoneNumber : {required  } , 
+        phoneNumber : {required , validatePhoneNumber } , 
 
         email : { required , email } , 
     }
