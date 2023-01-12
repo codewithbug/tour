@@ -257,6 +257,25 @@
     background-repeat: no-repeat;
 }
 
+.balanceContainer{
+    
+    color: black;
+    border:1px solid #2962FF;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 100px;
+}
+
+.manatSign{
+    font-family: arial;
+}
+
+
+.mobileBalanceContainer{
+    font-weight: bold;
+    border: 1px solid #2962FF;
+    display: inline;
+}
 /*      Media Queries      */
 
 @media screen and (max-width: 1557px){
@@ -269,7 +288,7 @@
         font-size: 22px;
     }
 
-    .addNewTourButton{
+    .addNewTourButton , .balanceContainer{
         font-size: 12px;
     }
 

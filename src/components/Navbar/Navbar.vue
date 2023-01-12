@@ -26,7 +26,10 @@
         <!--      navbar right side (button , profile icon etc.)      -->
         <div class="col-auto rightPart">
 
-            <button class="col-auto text-center px-4 py-2 addNewTourButton" @click="onMobileMenuClick('/upload')"> Yeni tur +</button>
+
+            <p class="col-auto text-center my-0 px-4 py-2 balanceContainer"> Balans: 0 <span class="manatSign"> ₼ </span> </p>
+
+            <button class="col-auto text-center ml-5 px-4 py-2 addNewTourButton" @click="onMobileMenuClick('/upload')"> Yeni tur +</button>
 
             <div class="col-auto mb-0 avatar" v-if="userInfo" >
 
@@ -106,7 +109,8 @@
 
                 <p class="col-12 text-center" @click="onMobileMenuClick('/')"> Əsas </p>
                 <p class="col-12 text-center"> Haqqımızda </p>
-                <a class="col-12 text-center" href="https://wa.me/+994556627955"> Əlaqə </a>
+                <a class="col-12 text-center mb-5" href="https://wa.me/+994556627955"> Əlaqə </a>
+                <p class="col-auto text-center py-2 mobileBalanceContainer"> Balans: 4 <span class="manatSign"> ₼ </span>  </p>
 
             </div>
 
