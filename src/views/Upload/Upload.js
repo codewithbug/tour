@@ -116,6 +116,23 @@ export default {
 
     methods : {
 
+        /*  
+        
+            when loading and parsing tourData from localStorage on page visit , the v-autocomplete element doesn't trigger the input event
+
+            so , we need to execute loadCitiesByCountry method manually
+        
+        */
+
+        loadCitiesByCountryOnLocalStorageLoading : function(){
+
+            if( this.tourData.tourCountry.length > 0 ){
+
+                this.loadCitiesByCountry()
+            }
+        },
+        
+
         addTravelPlan : function(){
 
             this.tourData.travelPlans.push({...this.travelPlanData})
@@ -395,7 +412,7 @@ export default {
 
     async mounted() {
 
-        console.log(this.tourData);
+        this.loadCitiesByCountryOnLocalStorageLoading();
 
         this.setUserId();
 
